@@ -1,10 +1,225 @@
+
+/* Sizing will have to be adjusted and media queriers are needed */
+
+/*todos page */
+
+header {
+    float: right;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
 h1{
     color: red;
 }
+.card{
+    border: 1px solid green;
+    width: 25%;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 30px;
+    
+}
+
+.card > img {
+    width: 100px;
+    height: 100px;
+}
+
+.card > h2 {
+    font-size: 16px;
+}
+
+.card > a{
+    color: black;
+}
+
 .completed{
     text-decoration: line-through;
     color: gray;
 }
 .not{
     text-decoration: underline;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+form { 
+    border: 1px solid red;
+    font-size: 14px;
+    text-align: center;
+    width: 100%; /* will have to adjust and use media queriers */
+    height: 175px;
+}
+
+span > label {
+    border: 1px solid hotpink;   
+}
+
+span + input {
+    border: 2px solid pink;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+
+}
+
+.kanbancolumn {
+    float: left;
+    clear: right;
+    width: 25%; /* will have to adjust and use media queriers */
+    height: 900px;
+    text-align: center;
+    border: 1px solid black;
+    margin-left: 20px;
+    padding: 0px 15px;
+}
+
+
+.kanbantitle {
+    font-size: 20px;
+    padding: 15px 0px;
+    background-color: pink; 
+    margin-bottom: 20px;
+}
+
+section + button {
+    border: 2px solid pink;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+/* div .kanbantitle {   
+    border: 5px solid green;
+    width: 25%; 
+    text-align: center;
+    margin-left: 20px;
+
+    try another day
+} */
+
+.kanbannote {
+    width: 99%; /* may have to adjust and use media queriers ?*/
+    height: 150px;
+    background-color: black;
+    color: white;
+}
+
+section {
+    display: block;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.todoItem {
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+
+/*index page*/
+/*need ideas*/
+
+
+.indexbody {
+    border: 1px solid red;
+    height: 200px;
+    width: 500px;
+    margin: 400px 150px;
+    text-align: center;
+
+}
+
+.indexbig {
+    font-size: 30px;
+    color: black;
+}
+
+.indexsmall {
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+    float: left;
+    clear: both;
+    padding: 15px 225px;
+}
+
+
+/*login page*/
+
+.loginform {
+    border: 2px solid pink;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    height: 450px;
+    width: 450px;
+    margin: 280px 170px; /* adjust and add media queriers*/
+    padding: 120px 130px;
+}
+
+.loginform > h2{
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+form > .logininput {
+    float: left;
+    clear: both;
+    padding: 10px 25px;
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+}
+
+input {
+    border: solid 1px red;
+    padding: 5px 15px;
+    background-color: pink;
+    margin: 15px 0px;
+}
+
+
+
+/*sign up*/
+
+.signupform {
+    border: 2px solid pink;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    height: 500px;
+    width: 500px;
+    margin: 250px 150px; /* adjust and add media queriers*/
+    padding: 75px 150px;
+}
+
+.signupform > h2{
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+form > .signupinput {
+    float: left;
+    clear: both;
+    padding: 10px 25px;
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+}
+
+input {
+    border: solid 1px red;
+    padding: 5px 15px;
+    background-color: pink;
+    margin: 15px 0px;
 }

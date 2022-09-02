@@ -1,9 +1,37 @@
+//Dracula
+function init (){
+    console.log(dragula([
+        document.getElementById('uL1'), //parent container:todo
+        document.getElementById('uL2'), //parent container: inprogress
+        document.getElementById('uL3'), // parent container: completed
+        //document.getElementById('4'),
+        //document.getElementById('5')
+    ]))
+}
+
+const btn = document.getElementById('displayandhide').addEventListener('click', displayOrHide); // button to hide the input 
+
 const deleteBtn = document.querySelectorAll('.del')
 const todoItem = document.querySelectorAll('span.not')
 const todoComplete = document.querySelectorAll('span.completed')
+// const dragulaProgress = document.querySelectorAll('')
+
+
+
+function displayOrHide() {    // function to hide inputs when adding a new task
+    const form = document.getElementById('form');
+    if (form.style.display === 'none') {
+        // 👇️ this SHOWS the form
+        form.style.display = 'block';
+    } else {
+        // 👇️ this HIDES the form
+        form.style.display = 'none';
+    }
+}
 
 Array.from(deleteBtn).forEach((el)=>{
     el.addEventListener('click', deleteTodo)
+    
 })
 
 Array.from(todoItem).forEach((el)=>{
