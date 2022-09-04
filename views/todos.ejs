@@ -30,9 +30,8 @@
                     <span>
                         <label for="description">Description</label>
                         <textarea placeholder="description" name="description"></textarea>
-
                     </span>
-                    <input type="submit">
+                    <input id="submitbtn" type="submit">
                 </form>
 
 
@@ -41,6 +40,8 @@
             <% todos.forEach( el => { %>
                     <li class='todoItem kanbannote'  data-id='<%=el._id%>'>
                         <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                        <span><%= el.title %></span>
+                        <span><%= el.description %></span>
                         <span class='del'> Delete </span>
                     </li>
             <% }) %>    

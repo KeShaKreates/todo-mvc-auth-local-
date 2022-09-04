@@ -1,13 +1,61 @@
-Finish create form
-Check for mobile first
-Finish Css for all pagesssss
-Create a user card
+CSS
+    -Check for mobile-  --- KeSha
+        -adjust sizing for all pages
+            - media queries - adjust for desktop sizes.
+            -flexbox
+
+Finish Css for all pagesssss --- KeSha
+    - fonts
+    - blue -> green
+    - pastel pink --> spun cotton white
+    - styling
+        - mater
+
+set a max # of todos ? ------- Olivia
+    - container - flex - relative to container
+        -view height - containers can keep going.
+
+Add to todos.ejs ? Ideas ? ---- MICAH 
+    -switching card and welcome
+
+Add to user card ? Ideas ? ---- MICAH
+    -box shadow
+    - blue -> green
+    - pastel pink --> spun cotton white
+
+style alerts --- KeSha
+
+HTML
+Move delete button some where else ------ MICAH
+    -x maybe
+
+*** using Heebo font from google ***
+
+
+Javascript -
+when submitting with empty fields it keeps loading ---Olivia
+    -fix by adding alert
+        - form validation for completing
+
+dragging and refreshing ---- Olivia
+    - keep data to dragged column.
+    
+checkbox to move tasks into diff columns --- KeSha
+    - copy and hide in todo
 
 
 
+/*const { reset } = require("nodemon"); */
+but really who... show yourself.
 
 
+future ideas:
+- opensource
+- attach to 100devs
+- kanboard for each class
 
+
+Psuedo Code:
 request thru - moving task from todo to in progress
 -hit controller - to handle put request - update 
 - go to model to update item in database to in progress - boolean
@@ -23,6 +71,6 @@ if (todoItem === inprogress){
 }else ( completed)
 then strike through when clicked
 
-
+ hebo-font
 
 

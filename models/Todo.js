@@ -12,8 +12,8 @@ const TodoSchema = new mongoose.Schema({
   status: {
     type: String,
     required: true,
-    default: 'progress',
-    enum:['progress', 'completed']
+    default: 'doing',
+    enum:['doing', 'done']
   },
   userId: {
     type: String,

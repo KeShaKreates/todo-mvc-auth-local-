@@ -10,7 +10,7 @@ module.exports = {
         }catch(err){
             console.log(err)
         }
-    },
+    },   
     createTodo: async (req, res)=>{
         try{
             await Todo.create({title: req.body.title, description:req.body.description, completed: false, userId: req.user.id})
