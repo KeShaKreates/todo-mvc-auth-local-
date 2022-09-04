@@ -54,6 +54,10 @@ form {
     height: 175px;
 }
 
+#form {
+    display: none;
+}
+
 span > label {
     border: 1px solid hotpink;   
 }
