@@ -8,16 +8,15 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body onload="init()">
-    <header>Hi <%= user.userName %>, Welcome to Your Kanban Board!</header>
-    
-    
-
-    <div class="card">
-        <img src="IMG_8766.PNG" alt="User image">
-        <h2><%= user.userName %> has <%= left %> things left to do.</h2>
-        <a href="/logout">Logout</a>
+    <div id="info-top">
+        <header>Hi <%= user.userName %>, Welcome to Your Kanban Board!</header>
+        <div class="card">
+            <img src="IMG_8766.PNG" alt="User image">
+            <h2><%= user.userName %> has <%= left %> things left to do.</h2>
+            <a href="/logout">Logout</a>
+        </div>
     </div>
-    <div>
+    <div id="kanban-container">
         <section class="kanbancolumn">
             <section class="kanbantitle">To Do</section>
                 <button id="displayandhide">Create a new task</button>
