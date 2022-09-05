@@ -34,17 +34,18 @@
                 </form>
 
 
-
-            <ul id="uL1">
-            <% todos.forEach( el => { %>
-                    <li class='todoItem kanbannote'  data-id='<%=el._id%>'>
-                        <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                        <span><%= el.title %></span>
-                        <span><%= el.description %></span>
-                        <span class='del'> Delete </span>
-                    </li>
-            <% }) %>    
-            </ul>
+            <div class="list-container">
+                <ul id="uL1">
+                <% todos.forEach( el => { %>
+                        <li class='todoItem kanbannote-todo'  data-id='<%=el._id%>'>
+                            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                            <span id="task-title"><%= el.title %></span>
+                            <span id="task-description"><%= el.description %></span>
+                            <span class='del'> Delete </span>
+                        </li>
+                <% }) %>    
+                </ul>
+            </div>
             </section>
 
         <section class="kanbancolumn">

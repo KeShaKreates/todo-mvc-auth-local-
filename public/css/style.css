@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 /* Sizing will have to be adjusted and media queriers are needed */
 
 /*todos page */
@@ -14,7 +17,7 @@ header {
 }
 
 .card {
-  background: #d1e8c1;
+  background: #f5d6cb;
   border-radius: 5px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   /* border: 1px solid green; */
@@ -46,10 +49,6 @@ header {
 }
 .not {
   text-decoration: underline;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 form {
@@ -114,13 +113,37 @@ section + button {
     try another day
 } */
 
-.kanbannote {
-  width: 99%; /* may have to adjust and use media queriers ?*/
-  height: 150px;
-  background-color: black;
-  color: white;
-}
+/* made changes on kanbannote-todo */
 
+.kanbannote-todo {
+  display: flex;
+  flex-flow: column nowrap;
+  border-radius: 5px;
+  width: 100%; /* may have to adjust and use media queriers ?*/
+  /* height: 150px; */
+  background: #889c79;
+  color: white;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 3px;
+  cursor: pointer;
+}
+#task-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 5px;
+}
+/* #task-description {
+  display: none;
+} */
+.del {
+  display: none;
+  background: #d1e8c1;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  padding: 2px;
+  cursor: pointer;
+}
 section {
   display: block;
 }
@@ -130,10 +153,10 @@ li {
   list-style: none;
 }
 
-.todoItem {
+/*item below might be repeative with .kanbannote-todo being called above*/
+/* .todoItem {
   height: 150px;
-  margin-bottom: 15px;
-}
+} */
 
 /*index page*/
 /*need ideas*/
