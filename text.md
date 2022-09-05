@@ -3,7 +3,7 @@ CSS
 -adjust sizing for all pages - media queries - adjust for desktop sizes.
 -flexbox
 
-Finish Css for all pagesssss --- KeSha - fonts - blue -> green - pastel pink --> spun cotton white - styling - mater
+Finish Css for all pagesssss --- KeSha - fonts - blue -> green - pastel pink --> spun cotton white - styling - mater (maybe add a line that says the date with the day of the week under Hi name welcome...?)
 
 set a max # of todos ? ------- Olivia - container - flex - relative to container
 -view height - containers can keep going.
