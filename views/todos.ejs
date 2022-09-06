@@ -8,12 +8,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;700;900&display=swap" rel="stylesheet">
     <title>Document</title>
+    <title>Kanban Board</title>
     <link rel="stylesheet" href="css/style.css">
+   <!--Import Google Icon Font-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!--Import materialize.css-->
+   <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
 </head>
 <body onload="init()">
     <div id="info-top">
         <header>Hi <%= user.userName %>, Welcome to Your Kanban Board!</header>
-        <div class="card">
+        <div class="card light blue-text text-darken-4">
             <img src="IMG_8766.PNG" alt="User image">
             <h2><%= user.userName %> has <%= left %> things left to do.</h2>
             <a href="/logout">Logout</a>
@@ -36,47 +41,51 @@
                     <input id="submitbtn" type="submit">
                 </form>
 
-
             <div class="list-container">
                 <ul id="uL1">
                 <% todos.forEach( el => { %>
-                        <li class='todoItem kanbannote-todo'  data-id='<%=el._id%>'>
-                            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                        <li id="ul11" class='todoItem kanbannote-todo'  data-id='<%=el._id%>'>
                             <span id="task-title"><%= el.title %></span>
                             <span id="task-description"><%= el.description %></span>
                             <span class='del'> Delete </span>
                         </li>
                 <% }) %>    
                 </ul>
+
+                <label>
+                    <input type="checkbox" class="filled-in" checked="checked  id="accept" name="accept" />
+                    <span>Move to the next column</span>
+                </label>
+
+                </section>
+            
+                <section class="kanbancolumn">
+                    <section class="kanbantitle">Doing</section>
+                    <ul id="uL2">  
+                        <li id="ul21" class='todoItem kanbannote-todo' data-id=''>
+                            <span id="task-title"></span>
+                            <span id="task-description"></span>
+                            <span class='del'> </span>
+                        </li>
+                    </ul>
+                </section>
+            
+                <section class="kanbancolumn">
+                    <section class="kanbantitle">Done</section>
+                    <ul id="uL3">
+                        <li id="ul31" class='todoItem kanbannote-todo' data-id=''>
+                            <span id="task-title"></span>
+                            <span id="task-description"></span>
+                            <span class='del'> </span>
+                        </li>
+                    </ul>
+                </section>
             </div>
-            </section>
-
-        <section class="kanbancolumn">
-            <section class="kanbantitle">Doing</section>
-            <ul id="uL2">  
-                <li class='todoItem' data-id=" ">
-                    <span class=""></span>
-                    <span class='del'></span>
-                </li>
-            </ul>
-        </section>
-
-        <section class="kanbancolumn">
-            <section class="kanbantitle">Done</section>
-            <ul id="uL3">
-                <li class='todoItem' data-id=" ">
-                    <span class=""></span>  
-                    <span class='del'></span>
-                </li>
-            </ul>
-            </section>
-    </div>
-    
-
    
 
     <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/$VERSION/dragula.min.js'></script> -->
     <script src="https://cdn.jsdelivr.net/gh/bevacqua/dragula@3.7.3/dist/dragula.min.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
 </body>
 </html>

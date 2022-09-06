@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
   font-family: 'Heebo', Courier, monospace;
-  background: #263238;
 }
 /* Sizing will have to be adjusted and media queriers are needed */
 
@@ -167,9 +166,19 @@ section + button {
   background-color: #889c79;
   
 }
+
+ul > li {
+  border: solid 2px rgb(255, 0, 166);
+  display: flex;
+  flex-flow: column nowrap;
+  height: 150px;
+}
+
+
 /* #task-description {
   display: none;
 } */
+
 .del {
   display: none;
   background: #d1e8c1;
@@ -196,7 +205,6 @@ li {
 /*need ideas*/
 
 .indexbody {
-  position: absolute;
   box-shadow: 0 50px 50px rgb(0 0 0 / 0.9);
   text-shadow: 0 5px 5px rgb(0 0 0 / 0.4);
   height: 250px;

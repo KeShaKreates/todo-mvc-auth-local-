@@ -8,7 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Kanban Board</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
 </head>
 <body>
     <% if (locals.messages.errors) { %>
@@ -21,11 +25,13 @@
             <div class="alert alert-danger"><%= el.msg %></div>
         <% }) %>    
     <% } %>
-    <form class = "loginform" action="/login" method="POST">
+    <form class = "loginform light blue-text text-darken-4" action="/login" method="POST">
         <h2>Please login below</h2>
         <input class="logininput" type="email" name="email" placeholder="Email">
         <input class="logininput" type="password" name="password" placeholder="Password">
         <input type="submit">
     </form>
+
+    <script type="text/javascript" src="js/materialize.js"></script>
 </body>
 </html>
