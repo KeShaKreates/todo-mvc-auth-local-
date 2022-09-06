@@ -1,7 +1,9 @@
 * {
   box-sizing: border-box;
-  font-family: 'Heebo', Courier, monospace;
-  background: #263238;
+  font-family: "Heebo", Courier, monospace;
+}
+body {
+  background: #889c79;
 }
 /* Sizing will have to be adjusted and media queriers are needed */
 
@@ -114,7 +116,7 @@ span + input {
   width: 25%; /* will have to adjust and use media queriers */
   height: 900px;
   text-align: center;
-  background-color: #2A92BF;
+  background-color: #c1e8e0;
   margin-left: 20px;
   border-radius: 20px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.7);
@@ -124,7 +126,7 @@ span + input {
   font-size: 20px;
   font-weight: 200;
   padding: 15px 0px;
-  background-color: rgb(255, 137, 137);
+  background-color: #799c94;
   margin-bottom: 20px;
   border-radius: 20px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
@@ -144,19 +146,33 @@ section + button {
 }
 
 /* made changes on kanbannote-todo */
+.list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
+  width: 100%;
+  align-content: center;
+}
+ul {
+  padding-left: 0;
+  padding-top: 10px;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
 .kanbannote-todo {
   display: flex;
   flex-flow: column nowrap;
   border-radius: 5px;
   width: 100%; /* may have to adjust and use media queriers ?*/
   /* height: 150px; */
-  background: #889c79;
+  background: #e9cdd0;
   color: black;
   align-items: center;
   margin-bottom: 15px;
   padding: 3px;
-  cursor: pointer;  
+  cursor: pointer;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
   font-weight: 300;
 }
@@ -164,8 +180,6 @@ section + button {
   font-weight: bold;
   text-transform: uppercase;
   padding: 0px 10px;
-  background-color: #889c79;
-  
 }
 /* #task-description {
   display: none;
@@ -183,6 +197,7 @@ section {
 }
 
 li {
+  width: 100%;
   text-decoration: none;
   list-style: none;
 }
@@ -206,12 +221,12 @@ li {
   border-radius: 15px;
   color: black;
   padding-top: 20px;
-  background: linear-gradient(to top,#a4a4a4,#90caf9);
+  background: linear-gradient(to top, #a4a4a4, #90caf9);
 }
 
 .indexbig {
   background-color: transparent;
-  font-size: 30px;  
+  font-size: 30px;
   font-weight: 200;
 }
 
@@ -225,9 +240,7 @@ li {
   padding: 15px 225px;
   color: black;
   font-style: italic;
-
 }
-
 
 /*login page*/
 
@@ -240,7 +253,7 @@ li {
   width: 450px;
   margin: 280px 170px; /* adjust and add media queriers*/
   padding: 120px 130px;
-  background: linear-gradient(to top,#8f8f8f,#d1c4e9);
+  background: linear-gradient(to top, #8f8f8f, #d1c4e9);
   box-shadow: 0 50px 50px rgb(0 0 0 / 0.9);
 }
 
@@ -250,7 +263,8 @@ li {
   background-color: transparent;
 }
 
-form > .logininput { /*something is overridng the background color*/
+form > .logininput {
+  /*something is overridng the background color*/
   float: left;
   clear: both;
   padding: 10px 25px;
@@ -276,8 +290,8 @@ input {
   height: 500px;
   width: 500px;
   padding: 75px 150px;
-  margin: 250px 150px; 
-  background: linear-gradient(to top,#ffeeee,#c8e6c9);
+  margin: 250px 150px;
+  background: linear-gradient(to top, #ffeeee, #c8e6c9);
   box-shadow: 0 50px 50px rgb(0 0 0 / 0.9);
 }
 
@@ -300,5 +314,5 @@ input {
   padding: 5px 15px;
   margin: 15px 0px;
   background-color: transparent;
-  border: 1px solid black
+  border: 1px solid black;
 }
