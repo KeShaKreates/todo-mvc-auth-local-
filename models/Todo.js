@@ -1,13 +1,19 @@
 const mongoose = require('mongoose')
 
 const TodoSchema = new mongoose.Schema({
-  todo: {
+  title: {
     type: String,
     required: true,
   },
-  completed: {
-    type: Boolean,
+  description: {
+    type: String,
+    required: false,
+  },
+  status: {
+    type: String,
     required: true,
+    default: 'doing',
+    enum:['doing', 'done']
   },
   userId: {
     type: String,

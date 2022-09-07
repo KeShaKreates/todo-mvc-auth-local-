@@ -4,29 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;700;900&display=swap" rel="stylesheet">
     <title>Document</title>
+    <title>Kanban Board</title>
     <link rel="stylesheet" href="css/style.css">
+   <!--Import Google Icon Font-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!--Import materialize.css-->
+   <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
 </head>
-<body>
-    <h1>Todos</h1>
-    <ul>
-    <% todos.forEach( el => { %>
-            <li class='todoItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                <span class='del'> Delete </span>
-            </li>
-    <% }) %>    
-    </ul>
+<body onload="init()">
+    <div id="info-top">
+        <header>Hi <%= user.userName %>, Welcome to Your Kanban Board!</header>
+        <div class="card black-text">
+            <img src="IMG_8766.PNG" alt="User image">
+            <h2><%= user.userName %> has <%= left %> things left to do.</h2>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+    <div id="kanban-container">
+        <section class="kanbancolumn">
+            <section class="kanbantitle">To Do</section>
+                <button id="displayandhide">Create a new task</button>
 
-    <h2><%= user.userName %> has <%= left %> things left to do.</h2>
+                <form action="/todos/createTodo" method='POST' id="form">
+                    <span> 
+                        <label for="task">Task</label>
+                        <input id="inputtodo" type="text" placeholder="Enter a to do task" name='title'>
+                    </span>
+                    <span>
+                        <label for="description">Description</label>
+                        <textarea id ="descriptiontodo" placeholder="Enter a description" name="description"></textarea>
+                    </span>
+                    <input id="submitbtn" type="submit">
+                </form>
 
-    <form action="/todos/createTodo" method='POST'>
-        <input type="text" placeholder="Enter Todo Item" name='todoItem'>
-        <input type="submit">
-    </form>
+            <div class="list-container">
+                <ul id="uL1">
+                <% todos.forEach( el => { %>
+                        <li id="ul11" class='todoItem kanbannote-todo'  data-id='<%=el._id%>'>
+                            <span id="task-title"><%= el.title %></span>
+                            <span id="task-description"><%= el.description %></span>
+                            <span class='del'> Delete </span>
+                        </li>
+                <% }) %>    
+                </ul>
 
-    <a href="/logout">Logout</a>
+                </section>
+            
+                <section class="kanbancolumn">
+                    <section class="kanbantitle">Doing</section>
+                    <ul id="uL2">  
+                        <li id="ul21" class='todoItem' data-id=''>
+                            <span id="task-title"></span>
+                            <span id="task-description"></span>
+                        </li>
+                    </ul>
+                </section>
+            
+                <section class="kanbancolumn">
+                    <section class="kanbantitle">Done</section>
+                    <ul id="uL3">
+                        <li id="ul31" class='todoItem' data-id=''>
+                            <span id="task-title"></span>
+                            <span id="task-description"></span>
+                            <span class='del'> </span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+   
 
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/$VERSION/dragula.min.js'></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/bevacqua/dragula@3.7.3/dist/dragula.min.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
 </body>
 </html>

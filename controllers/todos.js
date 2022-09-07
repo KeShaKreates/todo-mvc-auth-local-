@@ -10,12 +10,22 @@ module.exports = {
         }catch(err){
             console.log(err)
         }
-    },
+    },   
     createTodo: async (req, res)=>{
         try{
-            await Todo.create({todo: req.body.todoItem, completed: false, userId: req.user.id})
+            await Todo.create({title: req.body.title, description:req.body.description, completed: false, userId: req.user.id})
+            console.log(req.body)
             console.log('Todo has been added!')
             res.redirect('/todos')
+        }catch(err){
+            console.log(err)
+        }
+    },
+    inProgress: async (req,res)=>{
+        try{
+            await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{progress: true})
+            console.log('Marked In Progress')
+            res.json('Marked In Progress')
         }catch(err){
             console.log(err)
         }

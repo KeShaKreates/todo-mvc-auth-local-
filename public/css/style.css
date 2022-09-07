@@ -1,10 +1,322 @@
-h1{
-    color: red;
+* {
+  box-sizing: border-box;
+
+  font-family: "Heebo", Courier, monospace;
 }
-.completed{
-    text-decoration: line-through;
-    color: gray;
+body {
+  background: #889c79;
+
+  font-family: "Heebo", Courier, monospace;
 }
-.not{
-    text-decoration: underline;
+
+
+/*todos page */
+#info-top {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+header {
+  font-size: 30px;
+  font-weight: 200;
+  margin-top: 35px;
+  margin-left: 30px;
+  text-shadow: 0 5px 5px rgb(0 0 0 / 0.4);
+}
+
+.card {
+  background: #f5d6cb;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  width: 25%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 100;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+  margin-right: 60px;
+}
+
+.card > img {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+}
+
+.card > h2 {
+  font-size: 18px;
+  font-weight: 100;
+  background-color: transparent;
+}
+
+.card > a {
+  color: black;
+  background-color: transparent;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+.not {
+  text-decoration: underline;
+}
+
+form {
+  font-size: 14px;
+  text-align: center;
+  width: 100%; 
+  height: 175px;
+  background-color: rgb(168, 212, 183);
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+  color: black;
+}
+
+form > span > #inputtodo {
+  background-color: rgb(168, 212, 183);
+  border-radius: 5px;
+  color: black;
+  border: solid 1px black;
+}
+
+#descriptiontodo {
+  border: solid 1px black;
+  font-weight: 200;
+  border-radius: 5px;
+  background-color: rgb(168, 212, 183);
+  color: black;
+}
+
+#form {
+  display: none;
+  color: black;
+}
+
+span > label {
+  font-weight: 200;
+  background-color: rgb(168, 212, 183);
+  color: black;
+}
+
+span + input {
+  border: 0px;
+  padding: 5px 20px;
+  text-decoration: none;
+  color: black;
+  background-color: rgb(241, 250, 173);
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+}
+#kanban-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.kanbancolumn {
+  float: left;
+  clear: right;
+  width: 25%; 
+  height: 900px;
+  text-align: center;
+  background-color: #c1e8e0;
+  margin-left: 20px;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.7);
+  overflow: scroll;
+}
+
+.kanbantitle {
+  font-size: 20px;
+  font-weight: 200;
+  padding: 15px 0px;
+  background-color: #799c94;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+  text-shadow: 0 5px 5px rgb(0 0 0 / 0.4);
+  width: 100%;
+}
+
+section + button {
+  border: 2px solid rgb(241, 250, 173);
+  font-weight: 200;
+  padding: 5px 20px;
+  text-decoration: none;
+  color: black;
+  background-color: rgb(241, 250, 173);
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  align-content: center;
+}
+ul {
+  padding-left: 0;
+  padding-top: 10px;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+.kanbannote-todo {
+  display: flex;
+  flex-flow: column nowrap;
+  border-radius: 5px;
+  width: 100%; 
+  background: #e9cdd0;
+  color: black;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 3px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+  font-weight: 300;
+}
+#task-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0px 10px;
+}
+
+ul > li {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 150px;
+}
+
+
+.del {
+  display: none;
+  background: #d1e8c1;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  padding: 2px;
+  cursor: pointer;
+}
+section {
+  display: block;
+}
+
+li {
+  width: 100%;
+  text-decoration: none;
+  list-style: none;
+}
+
+
+/*index page*/
+
+.indexbody {
+  box-shadow: 0 50px 50px rgb(0 0 0 / 0.9);
+  text-shadow: 0 5px 5px rgb(0 0 0 / 0.4);
+  height: 250px;
+  width: 500px;
+  margin: 350px auto;
+  text-align: center;
+  border-radius: 15px;
+  color: black;
+  padding-top: 20px;
+  background: linear-gradient(to top, #a4a4a4, #90caf9);
+}
+
+
+.indexbig {
+  background-color: transparent;
+  font-size: 30px;
+  font-weight: 200;
+}
+
+.indexsmall {
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 100;
+  text-decoration: none;
+  float: left;
+  clear: both;
+  padding: 15px 225px;
+  color: black;
+  font-style: italic;
+}
+
+/*login page*/
+
+.loginform {
+  padding: 5px 20px;
+  text-decoration: none;
+  color: black;
+  height: 450px;
+  width: 450px;
+  margin: 300px auto;
+  padding: 120px 130px;
+  background: linear-gradient(to top, #8f8f8f, #d1c4e9);
+  box-shadow: 0 50px 50px rgb(0 0 0 / 0.9);
+}
+
+.loginform > h2 {
+  font-size: 18px;
+  font-weight: lighter;
+  background-color: transparent;
+}
+
+form > .logininput {
+  /*something is overridng the background color*/
+  float: left;
+  clear: both;
+  padding: 10px 25px;
+  border: 1px solid black;
+  background-color: transparent;
+  text-align: center;
+}
+
+input {
+  padding: 5px 15px;
+  font-weight: 200;
+  background-color: transparent;
+  margin: 15px 0px;
+}
+
+/*sign up*/
+
+.signupform {
+  padding: 5px 20px;
+  text-decoration: none;
+  color: black;
+  height: 500px;
+  width: 500px;
+  padding: 75px 150px;
+  margin: 300px auto;
+  background: linear-gradient(to top, #ffeeee, #c8e6c9);
+  box-shadow: 0 50px 50px rgb(0 0 0 / 0.9);
+}
+
+.signupform > h2 {
+  font-size: 18px;
+  font-weight: lighter;
+  background-color: transparent;
+}
+
+form > .signupinput {
+  float: left;
+  clear: both;
+  padding: 10px 25px;
+  background-color: transparent;
+  border: 1px solid black;
+  text-align: center;
+  color: black;
+}
+
+input {
+  padding: 5px 15px;
+  margin: 15px 0px;
+  background-color: transparent;
+  border: 1px solid black;
 }

@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Kanban Board</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
 </head>
 <body>
     <% if (locals.messages.errors) { %>
@@ -17,10 +25,13 @@
             <div class="alert alert-danger"><%= el.msg %></div>
         <% }) %>    
     <% } %>
-    <form action="/login" method="POST">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
+    <form class = "loginform black-text" action="/login" method="POST">
+        <h2>Please login below</h2>
+        <input class="logininput" type="email" name="email" placeholder="Email">
+        <input class="logininput" type="password" name="password" placeholder="Password">
         <input type="submit">
     </form>
+
+    <script type="text/javascript" src="js/materialize.js"></script>
 </body>
 </html>
