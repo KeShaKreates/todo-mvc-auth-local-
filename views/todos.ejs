@@ -18,7 +18,7 @@
 <body onload="init()">
     <div id="info-top">
         <header>Hi <%= user.userName %>, Welcome to Your Kanban Board!</header>
-        <div class="card light blue-text text-darken-4">
+        <div class="card black-text">
             <img src="IMG_8766.PNG" alt="User image">
             <h2><%= user.userName %> has <%= left %> things left to do.</h2>
             <a href="/logout">Logout</a>
@@ -52,20 +52,14 @@
                 <% }) %>    
                 </ul>
 
-                <label>
-                    <input type="checkbox" class="filled-in" checked="checked  id="accept" name="accept" />
-                    <span>Move to the next column</span>
-                </label>
-
                 </section>
             
                 <section class="kanbancolumn">
                     <section class="kanbantitle">Doing</section>
                     <ul id="uL2">  
-                        <li id="ul21" class='todoItem kanbannote-todo' data-id=''>
+                        <li id="ul21" class='todoItem' data-id=''>
                             <span id="task-title"></span>
                             <span id="task-description"></span>
-                            <span class='del'> </span>
                         </li>
                     </ul>
                 </section>
@@ -73,7 +67,7 @@
                 <section class="kanbancolumn">
                     <section class="kanbantitle">Done</section>
                     <ul id="uL3">
-                        <li id="ul31" class='todoItem kanbannote-todo' data-id=''>
+                        <li id="ul31" class='todoItem' data-id=''>
                             <span id="task-title"></span>
                             <span id="task-description"></span>
                             <span class='del'> </span>

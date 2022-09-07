@@ -30,67 +30,7 @@ function init(){
     ]))
 }
 
-function checkboxSetup(){
-    var ul3 = document.getElementById('uL3');
-    attachClickEvents(ul3, moveToUL1); // needs to be edited to be removed and not go back to ul1
-    var ul2 = document.getElementById('uL2');
-    attachClickEvents(ul2, moveToUL1);
-    var ul1 = document.getElementById('uL1');
-    attachClickEvents(ul1, moveToUL2);
-}
 
-function attachClickEvents(parent, moveFunction){
-    var elements = parent.children;
-    for(var i = 0; i < elements.length; i++){
-        var element = elements[i];
-        if(element.tagName.toLowerCase() === 'li'){
-            var id = element.id;
-            attachOnClick(element, moveFunction, id);
-        }
-    }
-}
-
-function moveToUL3(id) {
-    remove(id);
-    append('uL3', createCheckBoxElement(id, moveToUL1));
-}
-
-function moveToUL2(id) {
-    remove(id);
-    append('uL2', createCheckBoxElement(id, moveToUL3));
-}
-
-function moveToUL1(id) {
-    remove(id);
-    append('uL1', createCheckBoxElement(id, moveToUL2));
-}
-
-function createCheckBoxElement(id, moveFunction){
-    var element = document.createElement('li');
-    element.setAttribute('type', 'li'); /* what do i put ?*/
-   element.setAttribute('name', id);
-    element.setAttribute('id', id);
-    attachOnClick(element, moveFunction, id);
-    return element;
-}
-
-function attachOnClick(element, callback, id){
-    element.onclick = function() {
-        callback(id);
-    };
-}
-
-function remove(id) {
-    var element = document.getElementById(id);
-    element.parentNode.removeChild(element);
-}
-
-function append(parentId, element){
-    var parent = document.getElementById(parentId);
-    parent.appendChild(element);
-}
-
-checkboxSetup();
 
 const deleteBtn = document.querySelectorAll('.del')
 const todoItem = document.querySelectorAll('span.not')

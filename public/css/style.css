@@ -74,29 +74,33 @@ form {
   background-color: rgb(168, 212, 183);
   border-radius: 15px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+  color: black;
 }
 
 form > span > #inputtodo {
-  border: 1px solid purple;
   background-color: rgb(168, 212, 183);
   border-radius: 5px;
+  color: black;
+  border: solid 1px black;
 }
 
 #descriptiontodo {
-  border: 1px solid purple;
+  border: solid 1px black;
   font-weight: 200;
   border-radius: 5px;
   background-color: rgb(168, 212, 183);
+  color: black;
 }
 
 #form {
   display: none;
+  color: black;
 }
 
 span > label {
-  border: 1px solid hotpink;
   font-weight: 200;
   background-color: rgb(168, 212, 183);
+  color: black;
 }
 
 span + input {
@@ -187,7 +191,6 @@ ul {
 }
 
 ul > li {
-  border: solid 2px rgb(255, 0, 166);
   display: flex;
   flex-flow: column nowrap;
   height: 150px;
@@ -228,13 +231,14 @@ li {
   text-shadow: 0 5px 5px rgb(0 0 0 / 0.4);
   height: 250px;
   width: 500px;
-  margin: 400px 150px;
+  margin: 350px auto;
   text-align: center;
   border-radius: 15px;
   color: black;
   padding-top: 20px;
   background: linear-gradient(to top, #a4a4a4, #90caf9);
 }
+
 
 .indexbig {
   background-color: transparent;
@@ -257,13 +261,12 @@ li {
 /*login page*/
 
 .loginform {
-  position: absolute;
   padding: 5px 20px;
   text-decoration: none;
   color: black;
   height: 450px;
   width: 450px;
-  margin: 280px 170px; /* adjust and add media queriers*/
+  margin: 300px auto;
   padding: 120px 130px;
   background: linear-gradient(to top, #8f8f8f, #d1c4e9);
   box-shadow: 0 50px 50px rgb(0 0 0 / 0.9);
@@ -295,14 +298,13 @@ input {
 /*sign up*/
 
 .signupform {
-  position: absolute;
   padding: 5px 20px;
   text-decoration: none;
   color: black;
   height: 500px;
   width: 500px;
   padding: 75px 150px;
-  margin: 250px 150px;
+  margin: 300px auto;
   background: linear-gradient(to top, #ffeeee, #c8e6c9);
   box-shadow: 0 50px 50px rgb(0 0 0 / 0.9);
 }
@@ -320,6 +322,7 @@ form > .signupinput {
   background-color: transparent;
   border: 1px solid black;
   text-align: center;
+  color: black;
 }
 
 input {
