@@ -1,22 +1,3 @@
-/*const { reset } = require("nodemon"); */
-
-/* const { render } = require("ejs"); Ima whoop VS code's a** */
-
-/* Removed from todos.ejs line 49
-<span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span> */
-
-/* may need to add kanbannote-todo on to ul2 and ul3? can be hid until transferred*/
-
-/*  undone = todotest = uL1  */
-
-/*  done = doingtest = uL2  */
-
-/*  make one for  (our)done = uL3  */
-
-/* li or could be ul */
-
-
-
 
 //Dracula
 
